@@ -3,17 +3,21 @@ import "./App.css";
 import axios from 'axios'; //added axios since we need that to make a API request
 
 
-function App() {
+export default function App() {
 
+const [space, setSpace] = useState([])
 useEffect(() => {
-  axios.get('https://api.nasa.gov/planetary/apod?api_key=1nRJGHrgqQlJMuOlo2RTk8ZnMmFs1NkX35J5ZKhK') //used key
+  axios.get('https://api.nasa.gov/neo/rest/v1/feed?start_date=1987-07-01&end_date=1987-07-07&api_key=1nRJGHrgqQlJMuOlo2RTk8ZnMmFs1NkX35J5ZKhK') //used key
   .then(res => {
-    console.log(res);
+    setSpace(res);
   })
   .catch(err => {
     console.error(err);
   })
 }, [])
+
+
+
 
 
 
@@ -28,4 +32,4 @@ useEffect(() => {
   );
 }
 
-export default App;
+// export default App;
