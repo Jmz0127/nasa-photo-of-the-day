@@ -1,5 +1,6 @@
 import React from 'react';
 
+// THIS IS THE CHILD
 
 const Pic = (props) => {
     return (     
