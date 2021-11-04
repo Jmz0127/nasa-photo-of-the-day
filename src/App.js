@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"; //added usestate and useeffect hooks
 import "./App.css";
 import axios from 'axios'; //added axios since we need that to make a API request
-import { API_KEY } from './constants/indexconstants.js';
+import { API_KEY } from './constants/indexconstants.js'; //added API info from constant folder
 
 
 export default function App() {
