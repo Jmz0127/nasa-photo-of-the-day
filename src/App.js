@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios'; //added axios since we need that to make a API request
 import Pic from './components/Pic' //components need to be capitalized
 
+// THIS IS THE PARENT
 
 function App() {
 
@@ -21,10 +22,11 @@ useEffect(() => {
 
 console.log(spaceData); //making sure state is set
 
+{/*PASSING PROPS DOWN FROM PARENT (HERE) TO CHILD (IN PIC FILE) BELOW*/}
 
   return (
     <div className="App">
-      <Pic data = {spaceData}/>
+      <Pic data = {spaceData}/> 
     </div>
   );
 }
